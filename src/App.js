@@ -18,7 +18,6 @@ class App extends React.Component {
 
   componentDidMount() {
     this.interval = setInterval(() => {
-      console.log(this.state.width)
       this.leftToCruise()
     }, 1000);
   }
@@ -30,9 +29,6 @@ class App extends React.Component {
   leftToCruise = () => {
     const totalTime = this.state.endDate - this.state.startDate;
     const timeLeft = this.state.endDate - this.state.currentDate;
-    console.log("totalTime", totalTime)
-    console.log("timeLeft", timeLeft)
-    console.log("math floor", 100 - Math.floor(timeLeft / totalTime * 100))
     if (timeLeft <= 0) {
       this.setState({
         width: 100
