@@ -11,7 +11,7 @@ class App extends React.Component {
     this.state = {
       startDate: new Date('September 9, 2019 12:00:00'),
       currentDate: new Date(),
-      endDate: new Date('November 28, 2019 20:00:00'),
+      endDate: new Date('November 27, 2019 20:00:00'),
       width: 0
     };
   }
