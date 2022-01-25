@@ -3,15 +3,15 @@ import './App.css';
 import { Progress } from 'reactstrap'
 import Countdown from 'react-countdown-now'
 
-const Completionist = () => <a href="https://www.youtube.com/watch?v=xBZLVcZhhFk">Nu ska vi kryssa!</a>
+const Completionist = () => <p>TAAS MENNÄÄN!</p>
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      startDate: new Date('September 9, 2019 12:00:00'),
+      startDate: new Date('January 1, 2022 12:00:00'),
       currentDate: new Date(),
-      endDate: new Date('November 27, 2019 20:00:00'),
+      endDate: new Date('March 18, 2022 12:00:00'),
       width: 0
     };
   }
@@ -30,7 +30,7 @@ class App extends React.Component {
       , 'font-weight: bold'
     ].join(';');
 
-    console.log("%c TUPLIIIIIIIIIS! ", styles)
+    console.log("%c TITEENIT! ", styles)
 
     this.interval = setInterval(() => {
       this.leftToCruise()
@@ -60,15 +60,13 @@ class App extends React.Component {
       <div className="App">
         <div className="bg-image"></div>
         <div className="countdown-container">
-          <h1>COUNTDOWN TO TUPLIS VOL 3.</h1>
+          <h1>COUNTDOWN TO TITEENIT</h1>
           <Countdown
             date={this.state.endDate}
           >
             <Completionist />
           </Countdown>
-          <Progress animated color="success" value={this.state.width} />
-          <br />
-          <p>TAAS MENNÄÄN!</p>
+          <Progress animated color="success" value={this.state.width} />  
         </div>
       </div>
     );
